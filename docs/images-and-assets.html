@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Images and Assets</title>
+  <link rel="stylesheet" href="../docs.css">
+</head>
+<body>
+<div class="hero-banner">
+  <img class="site-title" src="../images/web64-title.sprite" alt="Web64" width="256" height="128">
+  <p class="tagline">Sprites for a very small browser</p>
+</div>
+<div class="page-shell">
+  <div class="nav-row">
+    <a class="nav-link nav-home" href="../index.html"><img class="nav-icon" src="../ui/star.sprite" alt="" width="26" height="26">Home</a><a class="nav-link nav-about" href="../about.html"><img class="nav-icon" src="../images/cloud.sprite" alt="" width="26" height="26">About</a><a class="nav-link nav-features" href="../index.html#features"><img class="nav-icon" src="../images/purple-crystal.sprite" alt="" width="26" height="26">Features</a><a class="nav-link nav-links" href="../index.html#links"><img class="nav-icon" src="../ui/web.sprite" alt="" width="26" height="26">Links</a><a class="nav-link nav-docs nav-current" href="../docs.html"><img class="nav-icon" src="../ui/start-button.sprite" alt="" width="26" height="26">Docs</a>
+  </div>
+  <div class="docs-heading-card">
+    <h1 class="docs-heading-title"><img class="title-icon" src="../ui/start-button.sprite" alt="" width="26" height="26">Web64 Developer Docs</h1>
+    <p class="docs-heading-copy">A reference for building websites that run well on Nintendo 64.</p>
+  </div>
+  <div class="docs-layout">
+    <div class="docs-sidebar">
+      <p class="docs-sidebar-title">Guide Map</p>
+      <a class="docs-side-link docs-side-home" href="../docs.html"><img class="docs-side-icon" src="../ui/start-button.sprite" alt="" width="20" height="20">Docs Home</a>
+      <a class="docs-side-link docs-side-build" href="building-for-web64.html"><img class="docs-side-icon" src="../ui/star.sprite" alt="" width="20" height="20">Build</a>
+      <a class="docs-side-link docs-side-html" href="html64.html"><img class="docs-side-icon" src="../images/cloud.sprite" alt="" width="20" height="20">HTML64</a>
+      <a class="docs-side-link docs-side-css" href="css64.html"><img class="docs-side-icon" src="../images/purple-crystal.sprite" alt="" width="20" height="20">CSS64</a>
+      <a class="docs-side-link docs-side-fonts" href="fonts-and-languages.html"><img class="docs-side-icon" src="../ui/web.sprite" alt="" width="20" height="20">Fonts</a>
+      <a class="docs-side-link docs-side-assets docs-side-current" href="images-and-assets.html"><img class="docs-side-icon" src="../images/cloud.sprite" alt="" width="20" height="20">Assets</a>
+      <a class="docs-side-link docs-side-starter" href="starter-site.html"><img class="docs-side-icon" src="../ui/star.sprite" alt="" width="20" height="20">Starter</a>
+    </div><div class="docs-main">
+    <h1 class="page-title" style="background-color: #1c9fb0;">Images and Assets</h1>
+    <p>Web64 loads converted sprite resources. Keep paths simple, set dimensions, and reuse small assets when you can.</p>
+    <div class="section">
+      <h2 class="section-title">What works</h2>
+      <div class="section-body">
+        <div class="support-row"><p class="support-name">HTML images</p><p class="support-detail">img with src, alt, width, and height</p></div>
+        <div class="support-row"><p class="support-name">CSS backgrounds</p><p class="support-detail">background-image with repeat, size, and position controls</p></div>
+        <div class="support-row"><p class="support-name">Runtime format</p><p class="support-detail">Converted .sprite resources</p></div>
+        <div class="support-row"><p class="support-name">Image records</p><p class="support-detail">Up to 32 images in one parsed page</p></div>
+      </div>
+    </div>
+    <div class="section">
+      <h2 class="section-title">Image example</h2>
+      <div class="section-body">
+        <div class="css-demo-row"><img src="../images/purple-crystal.sprite" alt="Purple crystal" width="26" height="26"></div>
+        <pre class="code">&lt;img
+  src="images/crystal.sprite"
+  alt="Purple crystal"
+  width="26"
+  height="26"
+&gt;</pre>
+      </div>
+    </div>
+    <div class="section">
+      <h2 class="section-title">How paths are resolved</h2>
+      <div class="section-body">
+        <div class="support-row"><p class="support-name">img src</p><p class="support-detail">Relative to the HTML page URL.</p></div>
+        <div class="support-row"><p class="support-name">External CSS url()</p><p class="support-detail">Relative to the stylesheet URL.</p></div>
+        <div class="support-row"><p class="support-name">Inline style url()</p><p class="support-detail">Relative to the HTML page URL.</p></div>
+      </div>
+    </div>
+    <div class="section">
+      <h2 class="section-title">Good habits</h2>
+      <div class="section-body"><p>Set width and height, keep the intended aspect ratio, and avoid loading a long parade of large one-off sprites on the same page.</p></div>
+    </div>
+  </div>
+  </div>
+  <p class="footer"><a href="../index.html">Home</a> | <a href="../about.html">About Web64</a> | <a href="../docs.html">Developer Docs</a></p>
+</div>
+</body>
+</html>

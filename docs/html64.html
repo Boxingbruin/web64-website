@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HTML64</title>
+    <link rel="stylesheet" href="../docs.css">
+</head>
+<body>
+<div class="hero-banner">
+    <img class="site-title" src="../images/web64-title.sprite" alt="Web64" width="256" height="128">
+    <p class="tagline">The markup Web64 understands</p>
+</div>
+<div class="page-shell">
+    <div class="nav-row">
+        <a class="nav-link nav-home" href="../index.html"><img class="nav-icon" src="../ui/star.sprite" alt="" width="26" height="26">Home</a><a class="nav-link nav-about" href="../about.html"><img class="nav-icon" src="../images/cloud.sprite" alt="" width="26" height="26">About</a><a class="nav-link nav-features" href="../index.html#features"><img class="nav-icon" src="../images/purple-crystal.sprite" alt="" width="26" height="26">Features</a><a class="nav-link nav-links" href="../index.html#links"><img class="nav-icon" src="../ui/web.sprite" alt="" width="26" height="26">Links</a><a class="nav-link nav-docs nav-current" href="../docs.html"><img class="nav-icon" src="../ui/start-button.sprite" alt="" width="26" height="26">Docs</a>
+    </div>
+    <div class="docs-heading-card">
+        <h1 class="docs-heading-title"><img class="title-icon" src="../ui/start-button.sprite" alt="" width="26" height="26">Web64 Developer Docs</h1>
+        <p class="docs-heading-copy">A reference for building websites that run well on Nintendo 64.</p>
+    </div>
+    <div class="docs-layout">
+        <div class="docs-sidebar">
+            <p class="docs-sidebar-title">Guide Map</p>
+            <a class="docs-side-link docs-side-home" href="../docs.html"><img class="docs-side-icon" src="../ui/start-button.sprite" alt="" width="20" height="20">Docs Home</a>
+            <a class="docs-side-link docs-side-build" href="building-for-web64.html"><img class="docs-side-icon" src="../ui/star.sprite" alt="" width="20" height="20">Build</a>
+            <a class="docs-side-link docs-side-html docs-side-current" href="html64.html"><img class="docs-side-icon" src="../images/cloud.sprite" alt="" width="20" height="20">HTML64</a>
+            <a class="docs-side-link docs-side-css" href="css64.html"><img class="docs-side-icon" src="../images/purple-crystal.sprite" alt="" width="20" height="20">CSS64</a>
+            <a class="docs-side-link docs-side-fonts" href="fonts-and-languages.html"><img class="docs-side-icon" src="../ui/web.sprite" alt="" width="20" height="20">Fonts</a>
+            <a class="docs-side-link docs-side-assets" href="images-and-assets.html"><img class="docs-side-icon" src="../images/cloud.sprite" alt="" width="20" height="20">Assets</a>
+            <a class="docs-side-link docs-side-starter" href="starter-site.html"><img class="docs-side-icon" src="../ui/star.sprite" alt="" width="20" height="20">Starter</a>
+        </div><div class="docs-main">
+        <h1 class="page-title" style="background-color: #67b91e;">HTML64</h1>
+        <p>HTML64 keeps the useful pieces for small, visual pages. Unsupported tags are skipped while their visible text is usually kept.</p>
+        <div class="section">
+            <h2 class="section-title">Supported elements</h2>
+            <div class="section-body">
+<pre class="reference">Document
+  body  title  link
+
+Text
+  p  h1-h6  br  hr  pre
+  strong/b  em/i  span
+
+Interactive and media
+  a  button  img
+
+Lists and containers
+  ul  ol  li  div
+  address  article  aside
+  blockquote  footer  header
+  main  nav  section  table</pre>
+            </div>
+        </div>
+        <div class="section">
+            <h2 class="section-title">Supported attributes</h2>
+            <div class="section-body">
+                <div class="support-row"><p class="support-name">Every styled element</p><p class="support-detail">id, class, and style</p></div>
+                <div class="support-row"><p class="support-name">Links</p><p class="support-detail">href</p></div>
+                <div class="support-row"><p class="support-name">Images</p><p class="support-detail">src, alt, width, and height</p></div>
+                <div class="support-row"><p class="support-name">Stylesheets</p><p class="support-detail">link rel="stylesheet" href="..." inside head</p></div>
+            </div>
+        </div>
+        <div class="section">
+            <h2 class="section-title">Things Web64 leaves out</h2>
+            <div class="section-body">
+                <div class="support-row"><p class="support-name">script</p><p class="support-detail">JavaScript content is not rendered or executed.</p></div>
+                <div class="support-row"><p class="support-name">Unknown tags</p><p class="support-detail">The tag is ignored; visible text can still appear.</p></div>
+            </div>
+        </div>
+        <div class="section">
+            <h2 class="section-title">Built-in limits</h2>
+            <div class="section-body"><pre class="reference">Runs           1024
+Links           128
+Images           32
+Stylesheets       8
+Element depth    16</pre></div>
+        </div>
+    </div>
+    </div>
+    <p class="footer"><a href="../index.html">Home</a> | <a href="../about.html">About Web64</a> | <a href="../docs.html">Developer Docs</a></p>
+</div>
+</body>
+</html>
