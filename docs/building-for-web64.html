@@ -2,64 +2,84 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Build for Web64</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Build for Web64 - Web64 Docs</title>
+  <link rel="stylesheet" href="../fonts.css">
   <link rel="stylesheet" href="../docs.css">
 </head>
 <body>
 <div class="hero-banner">
-  <img class="site-title" src="../images/web64-title.sprite" alt="Web64" width="256" height="128">
-  <p class="tagline">Design for the console screen</p>
+  <img class="site-title" src="../images/web64-title.png" alt="Web64" width="256" height="128">
+  <p class="tagline">ROM, web64-net, network, and screen</p>
 </div>
 <div class="page-shell">
   <div class="nav-row">
-    <a class="nav-link nav-home" href="../index.html"><img class="nav-icon" src="../ui/star.sprite" alt="" width="26" height="26">Home</a><a class="nav-link nav-about" href="../about.html"><img class="nav-icon" src="../images/cloud.sprite" alt="" width="26" height="26">About</a><a class="nav-link nav-features" href="../index.html#features"><img class="nav-icon" src="../images/purple-crystal.sprite" alt="" width="26" height="26">Features</a><a class="nav-link nav-links" href="../index.html#links"><img class="nav-icon" src="../ui/web.sprite" alt="" width="26" height="26">Links</a><a class="nav-link nav-docs nav-current" href="../docs.html"><img class="nav-icon" src="../ui/start-button.sprite" alt="" width="26" height="26">Docs</a>
+    <a class="nav-link nav-home" href="../index.html"><img class="nav-icon" src="../ui/star.png" alt="" width="26" height="26">Home</a><a class="nav-link nav-about" href="../about.html"><img class="nav-icon" src="../images/cloud.png" alt="" width="26" height="26">About</a><a class="nav-link nav-links" href="../links.html"><img class="nav-icon" src="../ui/web.png" alt="" width="26" height="26">Links</a><a class="nav-link nav-docs" href="../docs.html"><img class="nav-icon" src="../images/purple-crystal.png" alt="" width="26" height="26">Docs</a>
   </div>
   <div class="docs-heading-card">
-    <h1 class="docs-heading-title"><img class="title-icon" src="../ui/start-button.sprite" alt="" width="26" height="26">Web64 Developer Docs</h1>
-    <p class="docs-heading-copy">A reference for building websites that run well on Nintendo 64.</p>
+    <h1 class="docs-heading-title"><img class="title-icon" src="../ui/start-button.png" alt="" width="26" height="26">Web64 Developer Docs</h1>
+    <p class="docs-heading-copy">Build compact websites for a browser running directly on Nintendo 64 hardware.</p>
   </div>
   <div class="docs-layout">
     <div class="docs-sidebar">
-      <p class="docs-sidebar-title">Guide Map</p>
-      <a class="docs-side-link docs-side-home" href="../docs.html"><img class="docs-side-icon" src="../ui/start-button.sprite" alt="" width="20" height="20">Docs Home</a>
-      <a class="docs-side-link docs-side-build docs-side-current" href="building-for-web64.html"><img class="docs-side-icon" src="../ui/star.sprite" alt="" width="20" height="20">Build</a>
-      <a class="docs-side-link docs-side-html" href="html64.html"><img class="docs-side-icon" src="../images/cloud.sprite" alt="" width="20" height="20">HTML64</a>
-      <a class="docs-side-link docs-side-css" href="css64.html"><img class="docs-side-icon" src="../images/purple-crystal.sprite" alt="" width="20" height="20">CSS64</a>
-      <a class="docs-side-link docs-side-fonts" href="fonts-and-languages.html"><img class="docs-side-icon" src="../ui/web.sprite" alt="" width="20" height="20">Fonts</a>
-      <a class="docs-side-link docs-side-assets" href="images-and-assets.html"><img class="docs-side-icon" src="../images/cloud.sprite" alt="" width="20" height="20">Assets</a>
-      <a class="docs-side-link docs-side-starter" href="starter-site.html"><img class="docs-side-icon" src="../ui/star.sprite" alt="" width="20" height="20">Starter</a>
+      <p class="docs-sidebar-title">Documentation</p>
+      <a class="docs-side-link docs-side-home" href="../docs.html"><img class="docs-side-icon" src="../ui/start-button.png" alt="" width="20" height="20">Docs Home</a>
+      <a class="docs-side-link docs-side-build docs-side-current" href="building-for-web64.html"><img class="docs-side-icon" src="../ui/star.png" alt="" width="20" height="20">Build</a>
+      <a class="docs-side-link docs-side-html" href="html64.html"><img class="docs-side-icon" src="../images/cloud.png" alt="" width="20" height="20">HTML</a>
+      <a class="docs-side-link docs-side-css" href="css64.html"><img class="docs-side-icon" src="../images/purple-crystal.png" alt="" width="20" height="20">CSS</a>
+      <a class="docs-side-link docs-side-fonts" href="fonts-and-languages.html"><img class="docs-side-icon" src="../ui/web.png" alt="" width="20" height="20">Fonts</a>
+      <a class="docs-side-link docs-side-assets" href="images-and-assets.html"><img class="docs-side-icon" src="../images/cloud.png" alt="" width="20" height="20">Assets</a>
+      <a class="docs-side-link docs-side-starter" href="starter-site.html"><img class="docs-side-icon" src="../ui/star.png" alt="" width="20" height="20">Starter</a>
     </div><div class="docs-main">
-    <h1 class="page-title" style="background-color: #1c64c7;">Build for Web64</h1>
-    <p>These are the N64-shaped boundaries to design around.</p>
-    <div class="section">
-      <h2 class="section-title">The screen</h2>
+    <h1 class="page-title">Build for Web64</h1>
+    <p class="page-lead">A Web64 session has two pieces: the browser ROM on the N64 and the <span class="inline-code">web64-net</span> desktop program connected to the cartridge over USB.</p>
+    <div class="section accent-blue">
+      <h2 class="section-title section-title-blue">Required pieces</h2>
+      <div class="section-body">
+        <div class="support-row"><p class="support-name">Browser</p><p class="support-detail"><span class="inline-code">web64.z64</span></p></div>
+        <div class="support-row"><p class="support-name">Cartridge</p><p class="support-detail">A supported link device with USB communication.</p></div>
+        <div class="support-row"><p class="support-name">Desktop program</p><p class="support-detail"><span class="inline-code">web64-net</span>, currently supported on Linux only.</p></div>
+        <div class="support-row"><p class="support-name">Host networking</p><p class="support-detail">Permission to create a TAP interface and configure routing and NAT.</p></div>
+        <div class="support-row"><p class="support-name">Website</p><p class="support-detail">Files reachable over HTTP.</p></div>
+      </div>
+    </div>
+    <div class="section accent-orange">
+      <h2 class="section-title section-title-orange">Launch sequence</h2>
+      <div class="section-body">
+        <div class="step-row"><p class="step-number">1</p><div class="step-copy"><p class="step-label">Build web64-net</p><p class="step-detail">On Linux, open the <span class="inline-code">web64-bridge</span> project directory and run <span class="inline-code">make</span>.</p></div></div>
+        <div class="step-row"><p class="step-number">2</p><div class="step-copy"><p class="step-label">Connect the cartridge</p><p class="step-detail">Attach the cartridge USB link to the Linux computer that will run <span class="inline-code">web64-net</span>.</p></div></div>
+        <div class="step-row"><p class="step-number">3</p><div class="step-copy"><p class="step-label">Boot Web64</p><p class="step-detail">Launch <span class="inline-code">web64.z64</span> from the cartridge before starting <span class="inline-code">web64-net</span>.</p></div></div>
+        <div class="step-row"><p class="step-number">4</p><div class="step-copy"><p class="step-label">Start web64-net</p><p class="step-detail">Run <span class="inline-code">./web64-net</span>. It creates the TAP interface and configures routing and NAT.</p></div></div>
+        <div class="step-row"><p class="step-number">5</p><div class="step-copy"><p class="step-label">Enter a URL</p><p class="step-detail">Web64 resolves the host and retrieves the page using its native network stack.</p></div></div>
+        <pre class="code">make
+./web64-net</pre>
+      </div>
+    </div>
+    <div class="section accent-green">
+      <h2 class="section-title section-title-green">Design for the screen</h2>
       <div class="section-body">
         <div class="dimension-stage">
           <div class="dimension-toolbar">640 x 64 browser toolbar</div>
           <div class="dimension-page">592 x 400 webpage viewport<div class="dimension-shell">560px content shell</div></div>
         </div>
-      </div>
-    </div>
-    <div class="section">
-      <h2 class="section-title">A good starting shell</h2>
-      <div class="section-body">
-<pre class="code">.page-shell {
+        <pre class="code">.page-shell {
   max-width: 560px;
   margin: 0 auto;
   padding: 8px;
 }</pre>
       </div>
     </div>
-    <div class="section">
-      <h2 class="section-title">N64-friendly defaults</h2>
+    <div class="section accent-purple">
+      <h2 class="section-title section-title-purple">Development workflow</h2>
       <div class="section-body">
-        <div class="support-row"><p class="support-name">Keep the layout clear</p><p class="support-detail">One or two columns are easier to read and cheaper to draw.</p></div>
-        <div class="support-row"><p class="support-name">Keep pages focused</p><p class="support-detail">Several smaller pages usually works better than one enormous page.</p></div>
+        <div class="support-row"><p class="support-name">Use relative URLs</p><p class="support-detail">Keep HTML, stylesheets, and <span class="inline-code">.sprite</span> assets together in a simple folder tree.</p></div>
+        <div class="support-row"><p class="support-name">Keep pages focused</p><p class="support-detail">Small pages, reused assets, and clear layout reduce memory and rendering work.</p></div>
+        <div class="support-row"><p class="support-name">Use the references</p><p class="support-detail">Only depend on elements and properties documented in HTML64 and CSS64.</p></div>
       </div>
     </div>
   </div>
   </div>
-  <p class="footer"><a href="../index.html">Home</a> | <a href="../about.html">About Web64</a> | <a href="../docs.html">Developer Docs</a></p>
+  <p class="footer"><a class="footer-link" href="../index.html">Home</a> | <a class="footer-link" href="../about.html">About Web64</a> | <a class="footer-link" href="../links.html">Web64 Links</a> | <a class="footer-link" href="../docs.html">Developer Docs</a></p>
 </div>
 </body>
 </html>

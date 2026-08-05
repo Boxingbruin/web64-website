@@ -2,61 +2,53 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>About Web64</title>
+    <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="hero-banner compact-hero">
-    <img
-            class="site-title"
-            src="images/web64-title.sprite"
-            alt="Web64"
-            width="256"
-            height="128"
-    >
-
-    <p class="tagline">
-        About the Nintendo 64 Web Browser
-    </p>
+<div class="hero-banner">
+    <img class="site-title" src="images/web64-title.png" alt="Web64" width="256" height="128">
+    <p class="tagline">The World Wide Web on Nintendo 64</p>
 </div>
-
 <div class="page-shell">
-    <div class="nav-row about-nav-row">
-        <a class="nav-link nav-home" href="index.html">Home</a>
-        <a class="nav-link nav-about" href="about.html">About</a>
+    <div class="nav-row">
+        <a class="nav-link nav-home" href="index.html"><img class="nav-icon" src="ui/star.png" alt="" width="26" height="26">Home</a><a class="nav-link nav-about" href="about.html"><img class="nav-icon" src="images/cloud.png" alt="" width="26" height="26">About</a><a class="nav-link nav-links" href="links.html"><img class="nav-icon" src="ui/web.png" alt="" width="26" height="26">Links</a><a class="nav-link nav-docs" href="docs.html"><img class="nav-icon" src="images/purple-crystal.png" alt="" width="26" height="26">Docs</a>
     </div>
 
-    <div class="content-row about-content-row">
-        <div class="content-card about-card welcome-card">
-            <h1 class="card-title blue-title">
-                What Is Web64?
-            </h1>
-
-            <p class="card-copy">
-                Web64 is an experimental native web browser built
-                for Nintendo 64 with libdragon.
-            </p>
-
-            <p class="card-copy">
-                HTML64 parses documents, CSS64 computes supported
-                styles, and the console renders each page directly.
-            </p>
+    <div class="content-row">
+        <div class="content-card welcome-card">
+            <h1 class="card-title blue-title"><img class="title-icon" src="ui/star.png" alt="" width="26" height="26">What Is Web64?</h1>
+            <div class="card-content">
+                <p class="card-copy">Web64 is an experimental native web browser built for Nintendo 64 with libdragon.</p>
+                <p class="card-copy">The console fetches pages, parses HTML64 and CSS64, lays out their contents, and renders the result itself.</p>
+            </div>
         </div>
 
-        <div class="content-card about-card features-card">
-            <h2 class="card-title green-title">
-                Project Direction
-            </h2>
-
-            <p class="card-copy">No JavaScript is planned.</p>
-            <p class="card-copy">The N64 owns browser behavior and page rendering.</p>
-            <p class="card-copy">The PC acts only as a low-level network bridge.</p>
+        <div class="content-card update-card">
+            <h2 class="card-title green-title"><img class="title-icon" src="images/cloud.png" alt="" width="26" height="26">The Desktop Modem</h2>
+            <div class="card-content">
+                <p class="card-copy">The <span class="inline-code">web64-bridge</span> desktop program acts as a modem.</p>
+                <p class="card-copy">Its <span class="inline-code">web64-net</span> executable creates a TAP interface, provides routing and NAT, and carries Ethernet frames over the cartridge USB connection.</p>
+            </div>
         </div>
     </div>
 
-    <p class="footer">
-        <a href="index.html">Return Home</a>
-    </p>
+    <div class="content-card wide-card">
+        <h2 class="card-title orange-title"><img class="title-icon" src="ui/web.png" alt="" width="26" height="26">Native Networking Stack</h2>
+        <div class="card-content architecture-mini">
+            <p class="stack-line">HTML64 / CSS64 / assets</p>
+            <p class="stack-line">HTTP</p>
+            <p class="stack-line">DNS</p>
+            <p class="stack-line">TCP / UDP / ICMP</p>
+            <p class="stack-line">IPv4</p>
+            <p class="stack-line">Ethernet / ARP</p>
+            <p class="stack-line">Ethernet frames over cartridge USB</p>
+        </div>
+    </div>
+
+    <p class="footer"><a class="footer-link" href="index.html">Home</a> | <a class="footer-link" href="about.html">About Web64</a> | <a class="footer-link" href="links.html">Web64 Links</a> | <a class="footer-link" href="docs.html">Developer Docs</a></p>
 </div>
 </body>
 </html>

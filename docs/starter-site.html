@@ -2,37 +2,39 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Starter Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Starter - Web64 Docs</title>
+  <link rel="stylesheet" href="../fonts.css">
   <link rel="stylesheet" href="../docs.css">
 </head>
 <body>
 <div class="hero-banner">
-  <img class="site-title" src="../images/web64-title.sprite" alt="Web64" width="256" height="128">
-  <p class="tagline">A clean little page to build on</p>
+  <img class="site-title" src="../images/web64-title.png" alt="Web64" width="256" height="128">
+  <p class="tagline">A small site ready for Web64</p>
 </div>
 <div class="page-shell">
   <div class="nav-row">
-    <a class="nav-link nav-home" href="../index.html"><img class="nav-icon" src="../ui/star.sprite" alt="" width="26" height="26">Home</a><a class="nav-link nav-about" href="../about.html"><img class="nav-icon" src="../images/cloud.sprite" alt="" width="26" height="26">About</a><a class="nav-link nav-features" href="../index.html#features"><img class="nav-icon" src="../images/purple-crystal.sprite" alt="" width="26" height="26">Features</a><a class="nav-link nav-links" href="../index.html#links"><img class="nav-icon" src="../ui/web.sprite" alt="" width="26" height="26">Links</a><a class="nav-link nav-docs nav-current" href="../docs.html"><img class="nav-icon" src="../ui/start-button.sprite" alt="" width="26" height="26">Docs</a>
+    <a class="nav-link nav-home" href="../index.html"><img class="nav-icon" src="../ui/star.png" alt="" width="26" height="26">Home</a><a class="nav-link nav-about" href="../about.html"><img class="nav-icon" src="../images/cloud.png" alt="" width="26" height="26">About</a><a class="nav-link nav-links" href="../links.html"><img class="nav-icon" src="../ui/web.png" alt="" width="26" height="26">Links</a><a class="nav-link nav-docs" href="../docs.html"><img class="nav-icon" src="../images/purple-crystal.png" alt="" width="26" height="26">Docs</a>
   </div>
   <div class="docs-heading-card">
-    <h1 class="docs-heading-title"><img class="title-icon" src="../ui/start-button.sprite" alt="" width="26" height="26">Web64 Developer Docs</h1>
-    <p class="docs-heading-copy">A reference for building websites that run well on Nintendo 64.</p>
+    <h1 class="docs-heading-title"><img class="title-icon" src="../ui/start-button.png" alt="" width="26" height="26">Web64 Developer Docs</h1>
+    <p class="docs-heading-copy">Build compact websites for a browser running directly on Nintendo 64 hardware.</p>
   </div>
   <div class="docs-layout">
     <div class="docs-sidebar">
-      <p class="docs-sidebar-title">Guide Map</p>
-      <a class="docs-side-link docs-side-home" href="../docs.html"><img class="docs-side-icon" src="../ui/start-button.sprite" alt="" width="20" height="20">Docs Home</a>
-      <a class="docs-side-link docs-side-build" href="building-for-web64.html"><img class="docs-side-icon" src="../ui/star.sprite" alt="" width="20" height="20">Build</a>
-      <a class="docs-side-link docs-side-html" href="html64.html"><img class="docs-side-icon" src="../images/cloud.sprite" alt="" width="20" height="20">HTML64</a>
-      <a class="docs-side-link docs-side-css" href="css64.html"><img class="docs-side-icon" src="../images/purple-crystal.sprite" alt="" width="20" height="20">CSS64</a>
-      <a class="docs-side-link docs-side-fonts" href="fonts-and-languages.html"><img class="docs-side-icon" src="../ui/web.sprite" alt="" width="20" height="20">Fonts</a>
-      <a class="docs-side-link docs-side-assets" href="images-and-assets.html"><img class="docs-side-icon" src="../images/cloud.sprite" alt="" width="20" height="20">Assets</a>
-      <a class="docs-side-link docs-side-starter docs-side-current" href="starter-site.html"><img class="docs-side-icon" src="../ui/star.sprite" alt="" width="20" height="20">Starter</a>
+      <p class="docs-sidebar-title">Documentation</p>
+      <a class="docs-side-link docs-side-home" href="../docs.html"><img class="docs-side-icon" src="../ui/start-button.png" alt="" width="20" height="20">Docs Home</a>
+      <a class="docs-side-link docs-side-build" href="building-for-web64.html"><img class="docs-side-icon" src="../ui/star.png" alt="" width="20" height="20">Build</a>
+      <a class="docs-side-link docs-side-html" href="html64.html"><img class="docs-side-icon" src="../images/cloud.png" alt="" width="20" height="20">HTML</a>
+      <a class="docs-side-link docs-side-css" href="css64.html"><img class="docs-side-icon" src="../images/purple-crystal.png" alt="" width="20" height="20">CSS</a>
+      <a class="docs-side-link docs-side-fonts" href="fonts-and-languages.html"><img class="docs-side-icon" src="../ui/web.png" alt="" width="20" height="20">Fonts</a>
+      <a class="docs-side-link docs-side-assets" href="images-and-assets.html"><img class="docs-side-icon" src="../images/cloud.png" alt="" width="20" height="20">Assets</a>
+      <a class="docs-side-link docs-side-starter docs-side-current" href="starter-site.html"><img class="docs-side-icon" src="../ui/star.png" alt="" width="20" height="20">Starter</a>
     </div><div class="docs-main">
-    <h1 class="page-title" style="background-color: #d54848;">Starter Site</h1>
-    <p>This is a small base you can copy, rename, and immediately make less boring.</p>
-    <div class="section">
-      <h2 class="section-title">Files</h2>
+    <h1 class="page-title">Starter</h1>
+    <p class="page-lead">This starter uses one HTML file, one stylesheet, preconverted <span class="inline-code">.sprite</span> artwork, and a built-in font fallback chain. Upload the folder to an HTTP host and open it from Web64.</p>
+    <div class="section accent-red">
+      <h2 class="section-title section-title-red">Folder layout</h2>
       <div class="section-body"><pre class="reference">my-site/
   index.html
   style.css
@@ -40,8 +42,8 @@
     logo.sprite
     background.sprite</pre></div>
     </div>
-    <div class="section">
-      <h2 class="section-title">index.html</h2>
+    <div class="section accent-green">
+      <h2 class="section-title section-title-green">index.html</h2>
       <div class="section-body"><pre class="code">&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -51,18 +53,25 @@
 &lt;/head&gt;
 &lt;body&gt;
   &lt;div class="page-shell"&gt;
+    &lt;img src="images/logo.sprite"
+      alt="My logo"
+      width="128" height="64"&gt;
     &lt;h1&gt;Hello, N64!&lt;/h1&gt;
-    &lt;p&gt;My site is alive.&lt;/p&gt;
+    &lt;p&gt;My site is online.&lt;/p&gt;
+    &lt;a href="about.html"&gt;About&lt;/a&gt;
   &lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;</pre></div>
     </div>
-    <div class="section">
-      <h2 class="section-title">style.css</h2>
+    <div class="section accent-blue">
+      <h2 class="section-title section-title-blue">style.css</h2>
       <div class="section-body"><pre class="code">body {
-  background-color: #178edb;
+  background: #178edb;
   color: #1d2633;
-  font-family: "Roundabout", at01;
+  font-family:
+    "Web64 Roundabout",
+    "Web64 Droid Sans",
+    "Web64 AT01";
   font-size: 16px;
   margin: 0;
 }
@@ -72,20 +81,32 @@
   margin: 0 auto;
   padding: 8px;
   background-color: #f7f0d5;
+  border: 3px solid #8e6425;
+}
+
+h1 {
+  color: #1c64c7;
+  font-size: 32px;
+}
+
+a {
+  color: #863bd0;
+  cursor: pointer;
 }</pre></div>
     </div>
-    <div class="section">
-      <h2 class="section-title">Before loading the ROM</h2>
+    <div class="section accent-orange">
+      <h2 class="section-title section-title-orange">Before you publish</h2>
       <div class="section-body">
-        <div class="support-row"><p class="support-name">Width</p><p class="support-detail">The page fits comfortably inside 560px.</p></div>
-        <div class="support-row"><p class="support-name">Fonts</p><p class="support-detail">Every family has a built-in fallback.</p></div>
-        <div class="support-row"><p class="support-name">Images</p><p class="support-detail">Paths and dimensions are explicit.</p></div>
-        <div class="support-row"><p class="support-name">Features</p><p class="support-detail">The HTML64 and CSS64 pages say they are supported.</p></div>
+        <div class="support-row"><p class="support-name">HTML</p><p class="support-detail">Use elements and attributes listed in the HTML page.</p></div>
+        <div class="support-row"><p class="support-name">CSS</p><p class="support-detail">Use documented selectors, properties, units, and values.</p></div>
+        <div class="support-row"><p class="support-name">Fonts</p><p class="support-detail">Provide a fallback list ending in a broad built-in family.</p></div>
+        <div class="support-row"><p class="support-name">Assets</p><p class="support-detail">Convert source artwork with libdragon's <span class="inline-code">mksprite</span> tooling, then use <span class="inline-code">.sprite</span> files with explicit dimensions and relative paths.</p></div>
+        <div class="support-row"><p class="support-name">Hosting</p><p class="support-detail">Confirm the site is reachable over HTTP from the network used by <span class="inline-code">web64-net</span>.</p></div>
       </div>
     </div>
   </div>
   </div>
-  <p class="footer"><a href="../index.html">Home</a> | <a href="../about.html">About Web64</a> | <a href="../docs.html">Developer Docs</a></p>
+  <p class="footer"><a class="footer-link" href="../index.html">Home</a> | <a class="footer-link" href="../about.html">About Web64</a> | <a class="footer-link" href="../links.html">Web64 Links</a> | <a class="footer-link" href="../docs.html">Developer Docs</a></p>
 </div>
 </body>
 </html>

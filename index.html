@@ -2,98 +2,53 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Web64 Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web64 - The Web on Nintendo 64</title>
+    <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="hero-banner">
-    <img
-            class="site-title"
-            src="images/web64-title.sprite"
-            alt="Web64"
-            width="256"
-            height="128"
-    >
-
-    <p class="tagline">
-        The World Wide Web on Nintendo 64
-    </p>
+    <img class="site-title" src="images/web64-title.png" alt="Web64" width="256" height="128">
+    <p class="tagline">The World Wide Web on Nintendo 64</p>
 </div>
-
 <div class="page-shell">
     <div class="nav-row">
-        <a class="nav-link nav-home" href="index.html"><img class="nav-icon" src="ui/star.sprite" alt="" width="26" height="26">Home</a><a class="nav-link nav-about" href="about.html"><img class="nav-icon" src="images/cloud.sprite" alt="" width="26" height="26">About</a><a class="nav-link nav-features" href="#features"><img class="nav-icon" src="images/purple-crystal.sprite" alt="" width="26" height="26">Features</a><a class="nav-link nav-links" href="#links"><img class="nav-icon" src="ui/web.sprite" alt="" width="26" height="26">Links</a><a class="nav-link nav-docs" href="docs.html"><img class="nav-icon" src="ui/start-button.sprite" alt="" width="26" height="26">Docs</a>
+        <a class="nav-link nav-home" href="index.html"><img class="nav-icon" src="ui/star.png" alt="" width="26" height="26">Home</a><a class="nav-link nav-about" href="about.html"><img class="nav-icon" src="images/cloud.png" alt="" width="26" height="26">About</a><a class="nav-link nav-links" href="links.html"><img class="nav-icon" src="ui/web.png" alt="" width="26" height="26">Links</a><a class="nav-link nav-docs" href="docs.html"><img class="nav-icon" src="images/purple-crystal.png" alt="" width="26" height="26">Docs</a>
     </div>
-
     <div class="content-row">
         <div class="content-card welcome-card">
-            <h1 class="card-title blue-title"><img class="title-icon" src="ui/star.sprite" alt="" width="26" height="26">Welcome Traveler!</h1>
-
+            <h1 class="card-title blue-title"><img class="title-icon" src="ui/star.png" alt="" width="26" height="26">A Real N64 Browser</h1>
             <div class="card-content">
-                <p class="card-copy">
-                    Step into the high speed information highway.
-                    Web64 brings the power of the
-                    Internet to your Nintendo 64.
-                </p>
-
-                <p class="card-copy callout">
-                    Grab your controller and start exploring!
-                </p>
+                <p class="card-copy">Web64 is a native web browser for Nintendo 64. The console parses pages, resolves styles, runs the network stack, and renders the result itself.</p>
+                <p class="card-copy callout">The computer is a modem, not a browser proxy.</p>
+                <p class="card-copy"><a class="start-link" href="docs.html">Open the developer docs</a></p>
             </div>
         </div>
-
         <div class="content-card update-card" id="features">
-            <h1 class="card-title purple-title"><img class="title-icon" src="images/purple-crystal.sprite" alt="" width="26" height="26">Latest Update</h1>
-
+            <h1 class="card-title purple-title"><img class="title-icon" src="images/purple-crystal.png" alt="" width="26" height="26">Inside Web64</h1>
             <div class="card-content">
-                <img
-                        class="new-feature-image"
-                        src="images/new-feature.sprite"
-                        alt="New feature"
-                        width="128"
-                        height="64"
-                >
-
-                <p class="card-copy version">
-                    v1.0 "Skyways"
-                </p>
-
+                <img class="new-feature-image" src="images/new-feature.png" alt="Web64 feature" width="128" height="64">
                 <div class="update-list">
-                    <p class="update-item">
-                        Improved CSS & HTML support
-                    </p>
-
-                    <p class="update-item">
-                        Complete network stack running on rom
-                    </p>
-
-                    <p class="update-item">
-                        New font-family support
-                    </p>
-
-                    <p class="update-item">
-                        Complete HTTP 1.1 support
-                    </p>
-
-                    <p class="update-item">
-                        Faster page rendering
-                    </p>
+                    <p class="update-item">HTML64, CSS64, and asset parsers</p>
+                    <p class="update-item">HTTP, TCP, DNS, UDP, and ICMP</p>
+                    <p class="update-item">IPv4, Ethernet, and ARP</p>
+                    <p class="update-item">USB cartridge link-device interface</p>
+                    <p class="update-item">Built-in fonts and PNG images</p>
                 </div>
-
-                <p class="card-copy thanks">
-                    Thanks for exploring with Web64!
-                </p>
             </div>
         </div>
     </div>
-
-    <p class="footer">
-        <a id="links" href="index.html">Home</a>
-        |
-        <a href="about.html">About Web64</a>
-        |
-        <a href="docs.html">Developer Docs</a>
-    </p>
+    <div class="content-card wide-card">
+        <h2 class="card-title green-title"><img class="title-icon" src="images/cloud.png" alt="" width="26" height="26">What You Need</h2>
+        <div class="card-content">
+            <p class="card-copy"><strong>1.</strong> The <span class="inline-code">web64.z64</span> browser ROM.</p>
+            <p class="card-copy"><strong>2.</strong> A supported USB-enabled flash cartridge.</p>
+            <p class="card-copy"><strong>3.</strong> The Web64 modem app, which creates a TAP interface and provides routing and NAT.</p>
+            <p class="card-copy"><strong>4.</strong> An HTTP website built with the supported HTML64 and CSS64 feature set.</p>
+        </div>
+    </div>
+    <p class="footer"><a class="footer-link" href="index.html">Home</a> | <a class="footer-link" href="about.html">About Web64</a> | <a class="footer-link" href="links.html">Web64 Links</a> | <a class="footer-link" href="docs.html">Developer Docs</a></p>
 </div>
 </body>
 </html>

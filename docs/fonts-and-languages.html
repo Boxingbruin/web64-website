@@ -2,85 +2,100 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Fonts and Languages</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fonts - Web64 Docs</title>
+    <link rel="stylesheet" href="../fonts.css">
     <link rel="stylesheet" href="../docs.css">
 </head>
 <body>
 <div class="hero-banner">
-    <img class="site-title" src="../images/web64-title.sprite" alt="Web64" width="256" height="128">
-    <p class="tagline">Choose a typeface from the cartridge</p>
+    <img class="site-title" src="../images/web64-title.png" alt="Web64" width="256" height="128">
+    <p class="tagline">Built-in typefaces and fallback</p>
 </div>
 <div class="page-shell">
     <div class="nav-row">
-        <a class="nav-link nav-home" href="../index.html"><img class="nav-icon" src="../ui/star.sprite" alt="" width="26" height="26">Home</a><a class="nav-link nav-about" href="../about.html"><img class="nav-icon" src="../images/cloud.sprite" alt="" width="26" height="26">About</a><a class="nav-link nav-features" href="../index.html#features"><img class="nav-icon" src="../images/purple-crystal.sprite" alt="" width="26" height="26">Features</a><a class="nav-link nav-links" href="../index.html#links"><img class="nav-icon" src="../ui/web.sprite" alt="" width="26" height="26">Links</a><a class="nav-link nav-docs nav-current" href="../docs.html"><img class="nav-icon" src="../ui/start-button.sprite" alt="" width="26" height="26">Docs</a>
+        <a class="nav-link nav-home" href="../index.html"><img class="nav-icon" src="../ui/star.png" alt="" width="26" height="26">Home</a><a class="nav-link nav-about" href="../about.html"><img class="nav-icon" src="../images/cloud.png" alt="" width="26" height="26">About</a><a class="nav-link nav-links" href="../links.html"><img class="nav-icon" src="../ui/web.png" alt="" width="26" height="26">Links</a><a class="nav-link nav-docs" href="../docs.html"><img class="nav-icon" src="../images/purple-crystal.png" alt="" width="26" height="26">Docs</a>
     </div>
     <div class="docs-heading-card">
-        <h1 class="docs-heading-title"><img class="title-icon" src="../ui/start-button.sprite" alt="" width="26" height="26">Web64 Developer Docs</h1>
-        <p class="docs-heading-copy">A reference for building websites that run well on Nintendo 64.</p>
+        <h1 class="docs-heading-title"><img class="title-icon" src="../ui/start-button.png" alt="" width="26" height="26">Web64 Developer Docs</h1>
+        <p class="docs-heading-copy">Build compact websites for a browser running directly on Nintendo 64 hardware.</p>
     </div>
     <div class="docs-layout">
         <div class="docs-sidebar">
-            <p class="docs-sidebar-title">Guide Map</p>
-            <a class="docs-side-link docs-side-home" href="../docs.html"><img class="docs-side-icon" src="../ui/start-button.sprite" alt="" width="20" height="20">Docs Home</a>
-            <a class="docs-side-link docs-side-build" href="building-for-web64.html"><img class="docs-side-icon" src="../ui/star.sprite" alt="" width="20" height="20">Build</a>
-            <a class="docs-side-link docs-side-html" href="html64.html"><img class="docs-side-icon" src="../images/cloud.sprite" alt="" width="20" height="20">HTML64</a>
-            <a class="docs-side-link docs-side-css" href="css64.html"><img class="docs-side-icon" src="../images/purple-crystal.sprite" alt="" width="20" height="20">CSS64</a>
-            <a class="docs-side-link docs-side-fonts docs-side-current" href="fonts-and-languages.html"><img class="docs-side-icon" src="../ui/web.sprite" alt="" width="20" height="20">Fonts</a>
-            <a class="docs-side-link docs-side-assets" href="images-and-assets.html"><img class="docs-side-icon" src="../images/cloud.sprite" alt="" width="20" height="20">Assets</a>
-            <a class="docs-side-link docs-side-starter" href="starter-site.html"><img class="docs-side-icon" src="../ui/star.sprite" alt="" width="20" height="20">Starter</a>
+            <p class="docs-sidebar-title">Documentation</p>
+            <a class="docs-side-link docs-side-home" href="../docs.html"><img class="docs-side-icon" src="../ui/start-button.png" alt="" width="20" height="20">Docs Home</a>
+            <a class="docs-side-link docs-side-build" href="building-for-web64.html"><img class="docs-side-icon" src="../ui/star.png" alt="" width="20" height="20">Build</a>
+            <a class="docs-side-link docs-side-html" href="html64.html"><img class="docs-side-icon" src="../images/cloud.png" alt="" width="20" height="20">HTML</a>
+            <a class="docs-side-link docs-side-css" href="css64.html"><img class="docs-side-icon" src="../images/purple-crystal.png" alt="" width="20" height="20">CSS</a>
+            <a class="docs-side-link docs-side-fonts docs-side-current" href="fonts-and-languages.html"><img class="docs-side-icon" src="../ui/web.png" alt="" width="20" height="20">Fonts</a>
+            <a class="docs-side-link docs-side-assets" href="images-and-assets.html"><img class="docs-side-icon" src="../images/cloud.png" alt="" width="20" height="20">Assets</a>
+            <a class="docs-side-link docs-side-starter" href="starter-site.html"><img class="docs-side-icon" src="../ui/star.png" alt="" width="20" height="20">Starter</a>
         </div><div class="docs-main">
-        <h1 class="page-title" style="background-color: #e96c14;">Fonts and Languages</h1>
-        <p>Web64 ships with a large font shelf. Pick a family, add a fallback, and keep the number of families used on one page reasonable.</p>
-        <div class="section">
-            <h2 class="section-title">Built-in families</h2>
+        <h1 class="page-title">Fonts</h1>
+        <p class="page-lead">Web64 carries its own font registry. Supply a comma-separated family list and the browser selects the first family it recognizes. If no requested family is available, Web64 uses its default fallback font.</p>
+        <div class="section accent-orange">
+            <h2 class="section-title section-title-orange">Fallback chains</h2>
             <div class="section-body">
-<pre class="reference">Abaddon          AT01
-Avenue Pixel     BitPotion
-Chunky Sans      Cyborg Sister
-Divinity         DM Sans
-Droid Sans       Enter Command
-Fibberish        Fira Mono Bold
-Fortzilla        Lato
-Liver            m3x6
-m5x7             m6x11 plus
-Minimal Pixel    Monogram
-Pacifico         Poco
-Roboto Medium    Roundabout
-Silver           Slab
-Timesplitter     Unbalanced
-Xolonium</pre>
-                <p class="note">The desktop compatibility sheet calls these “Web64 Roundabout”, “Web64 Slab”, and so on.</p>
-            </div>
-        </div>
-        <div class="section">
-            <h2 class="section-title">Available sizes</h2>
-            <div class="section-body">
-                <p style="font-size: 16px;">16px - body copy</p>
-                <p style="font-size: 20px;">20px - lead text</p>
-                <p style="font-size: 24px;">24px - section title</p>
-                <p style="font-size: 32px;">32px - page title</p>
-                <p style="font-size: 40px;">40px - big cartridge energy</p>
-            </div>
-        </div>
-        <div class="section">
-            <h2 class="section-title">Using a family</h2>
-            <div class="section-body">
-<pre class="code">body {
+        <pre class="code">body {
   font-family:
-    "Roundabout",
-    "Chunky Sans",
-    at01;
+    "Web64 Roundabout",
+    "Web64 Droid Sans",
+    "Web64 AT01";
 }</pre>
-                <p class="note">Web64 walks the list from left to right and uses the first built-in family it recognizes.</p>
+                <p>CSS64 checks the list from left to right. This lets a decorative heading fall back to a broader, more readable family without breaking the page.</p>
             </div>
         </div>
-        <div class="section">
-            <h2 class="section-title">Languages and symbols</h2>
-            <div class="section-body"><p>Glyph coverage varies by font. Test the exact accents, symbols, or alphabet your site needs, then keep a broad fallback at the end of the list.</p></div>
+        <div class="section accent-blue">
+            <h2 class="section-title section-title-blue">Supported sizes</h2>
+            <div class="section-body size-demo">
+                <p style="font-size: 16px;">small - 16px</p>
+                <p style="font-size: 20px;">medium - 20px</p>
+                <p style="font-size: 24px;">large - 24px</p>
+                <p style="font-size: 32px;">x-large - 32px</p>
+                <p style="font-size: 40px;">xx-large - 40px</p>
+            </div>
+        </div>
+        <div class="section accent-green">
+            <h2 class="section-title section-title-green">Built-in font shelf</h2>
+            <div class="section-body font-list">
+                <div class="font-demo" style="font-family: &quot;Web64 Abaddon&quot;, monospace;"><p class="font-name">Web64 Abaddon</p><p class="font-sample">ABADDON - The tiny web awakens.</p></div>
+                <div class="font-demo" style="font-family: &quot;Web64 AT01&quot;, monospace;"><p class="font-name">Web64 AT01</p><p class="font-sample">AT01 - Readable pixels for every page.</p></div>
+                <div class="font-demo" style="font-family: &quot;Web64 Avenue Pixel&quot;, monospace;"><p class="font-name">Web64 Avenue Pixel</p><p class="font-sample">Avenue Pixel - Welcome to Web64.</p></div>
+                <div class="font-demo" style="font-family: &quot;Web64 BitPotion&quot;, monospace;"><p class="font-name">Web64 BitPotion</p><p class="font-sample">BitPotion - Brew a colorful website.</p></div>
+                <div class="font-demo" style="font-family: &quot;Web64 Chunky Sans&quot;, monospace;"><p class="font-name">Web64 Chunky Sans</p><p class="font-sample">Chunky Sans - Big friendly headings.</p></div>
+                <div class="font-demo" style="font-family: &quot;Web64 Cyborg Sister&quot;, monospace;"><p class="font-name">Web64 Cyborg Sister</p><p class="font-sample">Cyborg Sister - Network online.</p></div>
+                <div class="font-demo" style="font-family: &quot;Web64 Divinity&quot;, monospace;"><p class="font-name">Web64 Divinity</p><p class="font-sample">Divinity - A bright page title.</p></div>
+                <div class="font-demo" style="font-family: &quot;Web64 DM Sans&quot;, monospace;"><p class="font-name">Web64 DM Sans</p><p class="font-sample">DM Sans - Comfortable body copy.</p></div>
+                <div class="font-demo" style="font-family: &quot;Web64 Droid Sans&quot;, monospace;"><p class="font-name">Web64 Droid Sans</p><p class="font-sample">Droid Sans - Reliable fallback text.</p></div>
+                <div class="font-demo" style="font-family: &quot;Web64 Enter Command&quot;, monospace;"><p class="font-name">Web64 Enter Command</p><p class="font-sample">Enter Command - CONNECT 64</p></div>
+                <div class="font-demo" style="font-family: &quot;Web64 Fibberish&quot;, monospace;"><p class="font-name">Web64 Fibberish</p><p class="font-sample">Fibberish - Strange little letters.</p></div>
+                <div class="font-demo" style="font-family: &quot;Web64 Fira Mono Bold&quot;, monospace;"><p class="font-name">Web64 Fira Mono Bold</p><p class="font-sample">Fira Mono Bold - GET /index.html</p></div>
+                <div class="font-demo" style="font-family: &quot;Web64 Fortzilla&quot;, monospace;"><p class="font-name">Web64 Fortzilla</p><p class="font-sample">Fortzilla - Heavy cartridge energy.</p></div>
+                <div class="font-demo" style="font-family: &quot;Web64 Lato&quot;, monospace;"><p class="font-name">Web64 Lato</p><p class="font-sample">Lato - Clean documentation text.</p></div>
+                <div class="font-demo" style="font-family: &quot;Web64 Liver&quot;, monospace;"><p class="font-name">Web64 Liver</p><p class="font-sample">Liver - A playful display face.</p></div>
+                <div class="font-demo" style="font-family: &quot;Web64 m3x6&quot;, monospace;"><p class="font-name">Web64 m3x6</p><p class="font-sample">m3x6 - tiny pixels, big internet</p></div>
+                <div class="font-demo" style="font-family: &quot;Web64 m5x7&quot;, monospace;"><p class="font-name">Web64 m5x7</p><p class="font-sample">m5x7 - compact interface text</p></div>
+                <div class="font-demo" style="font-family: &quot;Web64 m6x11 plus&quot;, monospace;"><p class="font-name">Web64 m6x11 plus</p><p class="font-sample">m6x11 plus - crisp and readable</p></div>
+                <div class="font-demo" style="font-family: &quot;Web64 Minimal Pixel&quot;, monospace;"><p class="font-name">Web64 Minimal Pixel</p><p class="font-sample">Minimal Pixel - less is more</p></div>
+                <div class="font-demo" style="font-family: &quot;Web64 Monogram&quot;, monospace;"><p class="font-name">Web64 Monogram</p><p class="font-sample">Monogram - The World Wide Web</p></div>
+                <div class="font-demo" style="font-family: &quot;Web64 Pacifico&quot;, monospace;"><p class="font-name">Web64 Pacifico</p><p class="font-sample">Pacifico - Surf the information highway</p></div>
+                <div class="font-demo" style="font-family: &quot;Web64 Poco&quot;, monospace;"><p class="font-name">Web64 Poco</p><p class="font-sample">Poco - Small pages, big adventure</p></div>
+                <div class="font-demo" style="font-family: &quot;Web64 Roboto Medium&quot;, monospace;"><p class="font-name">Web64 Roboto Medium</p><p class="font-sample">Roboto Medium - General purpose text</p></div>
+                <div class="font-demo" style="font-family: &quot;Web64 Roundabout&quot;, monospace;"><p class="font-name">Web64 Roundabout</p><p class="font-sample">Roundabout - Friendly Web64 body copy</p></div>
+                <div class="font-demo" style="font-family: &quot;Web64 Silver&quot;, monospace;"><p class="font-name">Web64 Silver</p><p class="font-sample">Silver - Retro menu lettering</p></div>
+                <div class="font-demo" style="font-family: &quot;Web64 Slab&quot;, monospace;"><p class="font-name">Web64 Slab</p><p class="font-sample">Slab - Strong section headings</p></div>
+                <div class="font-demo" style="font-family: &quot;Web64 Timesplitter&quot;, monospace;"><p class="font-name">Web64 Timesplitter</p><p class="font-sample">Timesplitter - Future network terminal</p></div>
+                <div class="font-demo" style="font-family: &quot;Web64 Unbalanced&quot;, monospace;"><p class="font-name">Web64 Unbalanced</p><p class="font-sample">Unbalanced - A quirky display font</p></div>
+                <div class="font-demo" style="font-family: &quot;Web64 Xolonium&quot;, monospace;"><p class="font-name">Web64 Xolonium</p><p class="font-sample">Xolonium - SYSTEM READY</p></div>
+            </div>
+        </div>
+        <div class="section accent-purple">
+            <h2 class="section-title section-title-purple">Glyph coverage</h2>
+            <div class="section-body"><p>Character coverage varies by font. Test the exact accents, symbols, or alphabet used by your page, then place a broad fallback family at the end of the list.</p></div>
         </div>
     </div>
     </div>
-    <p class="footer"><a href="../index.html">Home</a> | <a href="../about.html">About Web64</a> | <a href="../docs.html">Developer Docs</a></p>
+    <p class="footer"><a class="footer-link" href="../index.html">Home</a> | <a class="footer-link" href="../about.html">About Web64</a> | <a class="footer-link" href="../links.html">Web64 Links</a> | <a class="footer-link" href="../docs.html">Developer Docs</a></p>
 </div>
 </body>
 </html>

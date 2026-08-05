@@ -2,142 +2,126 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>CSS64</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS64 - Web64 Docs</title>
+    <link rel="stylesheet" href="../fonts.css">
     <link rel="stylesheet" href="../docs.css">
 </head>
 <body>
 <div class="hero-banner">
-    <img class="site-title" src="../images/web64-title.sprite" alt="Web64" width="256" height="128">
-    <p class="tagline">A colorful subset of CSS</p>
+    <img class="site-title" src="../images/web64-title.png" alt="Web64" width="256" height="128">
+    <p class="tagline">The style system Web64 understands</p>
 </div>
 <div class="page-shell">
     <div class="nav-row">
-        <a class="nav-link nav-home" href="../index.html"><img class="nav-icon" src="../ui/star.sprite" alt="" width="26" height="26">Home</a><a class="nav-link nav-about" href="../about.html"><img class="nav-icon" src="../images/cloud.sprite" alt="" width="26" height="26">About</a><a class="nav-link nav-features" href="../index.html#features"><img class="nav-icon" src="../images/purple-crystal.sprite" alt="" width="26" height="26">Features</a><a class="nav-link nav-links" href="../index.html#links"><img class="nav-icon" src="../ui/web.sprite" alt="" width="26" height="26">Links</a><a class="nav-link nav-docs nav-current" href="../docs.html"><img class="nav-icon" src="../ui/start-button.sprite" alt="" width="26" height="26">Docs</a>
+        <a class="nav-link nav-home" href="../index.html"><img class="nav-icon" src="../ui/star.png" alt="" width="26" height="26">Home</a><a class="nav-link nav-about" href="../about.html"><img class="nav-icon" src="../images/cloud.png" alt="" width="26" height="26">About</a><a class="nav-link nav-links" href="../links.html"><img class="nav-icon" src="../ui/web.png" alt="" width="26" height="26">Links</a><a class="nav-link nav-docs" href="../docs.html"><img class="nav-icon" src="../images/purple-crystal.png" alt="" width="26" height="26">Docs</a>
     </div>
     <div class="docs-heading-card">
-        <h1 class="docs-heading-title"><img class="title-icon" src="../ui/start-button.sprite" alt="" width="26" height="26">Web64 Developer Docs</h1>
-        <p class="docs-heading-copy">A reference for building websites that run well on Nintendo 64.</p>
+        <h1 class="docs-heading-title"><img class="title-icon" src="../ui/start-button.png" alt="" width="26" height="26">Web64 Developer Docs</h1>
+        <p class="docs-heading-copy">Build compact websites for a browser running directly on Nintendo 64 hardware.</p>
     </div>
     <div class="docs-layout">
         <div class="docs-sidebar">
-            <p class="docs-sidebar-title">Guide Map</p>
-            <a class="docs-side-link docs-side-home" href="../docs.html"><img class="docs-side-icon" src="../ui/start-button.sprite" alt="" width="20" height="20">Docs Home</a>
-            <a class="docs-side-link docs-side-build" href="building-for-web64.html"><img class="docs-side-icon" src="../ui/star.sprite" alt="" width="20" height="20">Build</a>
-            <a class="docs-side-link docs-side-html" href="html64.html"><img class="docs-side-icon" src="../images/cloud.sprite" alt="" width="20" height="20">HTML64</a>
-            <a class="docs-side-link docs-side-css docs-side-current" href="css64.html"><img class="docs-side-icon" src="../images/purple-crystal.sprite" alt="" width="20" height="20">CSS64</a>
-            <a class="docs-side-link docs-side-fonts" href="fonts-and-languages.html"><img class="docs-side-icon" src="../ui/web.sprite" alt="" width="20" height="20">Fonts</a>
-            <a class="docs-side-link docs-side-assets" href="images-and-assets.html"><img class="docs-side-icon" src="../images/cloud.sprite" alt="" width="20" height="20">Assets</a>
-            <a class="docs-side-link docs-side-starter" href="starter-site.html"><img class="docs-side-icon" src="../ui/star.sprite" alt="" width="20" height="20">Starter</a>
+            <p class="docs-sidebar-title">Documentation</p>
+            <a class="docs-side-link docs-side-home" href="../docs.html"><img class="docs-side-icon" src="../ui/start-button.png" alt="" width="20" height="20">Docs Home</a>
+            <a class="docs-side-link docs-side-build" href="building-for-web64.html"><img class="docs-side-icon" src="../ui/star.png" alt="" width="20" height="20">Build</a>
+            <a class="docs-side-link docs-side-html" href="html64.html"><img class="docs-side-icon" src="../images/cloud.png" alt="" width="20" height="20">HTML</a>
+            <a class="docs-side-link docs-side-css docs-side-current" href="css64.html"><img class="docs-side-icon" src="../images/purple-crystal.png" alt="" width="20" height="20">CSS</a>
+            <a class="docs-side-link docs-side-fonts" href="fonts-and-languages.html"><img class="docs-side-icon" src="../ui/web.png" alt="" width="20" height="20">Fonts</a>
+            <a class="docs-side-link docs-side-assets" href="images-and-assets.html"><img class="docs-side-icon" src="../images/cloud.png" alt="" width="20" height="20">Assets</a>
+            <a class="docs-side-link docs-side-starter" href="starter-site.html"><img class="docs-side-icon" src="../ui/star.png" alt="" width="20" height="20">Starter</a>
         </div><div class="docs-main">
-        <h1 class="page-title" style="background-color: #863bd0;">CSS64</h1>
-        <p>CSS64 supports a practical slice of CSS for colorful fixed-screen pages. Use this page as the quick compatibility check.</p>
-        <div class="section">
-            <h2 class="section-title">Selectors</h2>
+        <h1 class="page-title">CSS64</h1>
+        <p class="page-lead">CSS64 supports external stylesheets, embedded <span class="inline-code">&lt;style&gt;</span> blocks, and inline style attributes. Rules are parsed once and used by the N64 layout and renderer.</p>
+        <div class="section accent-purple">
+            <h2 class="section-title section-title-purple">Selectors and cascade</h2>
             <div class="section-body">
-                <div class="support-row"><p class="support-name">Supported</p><p class="support-detail">Element selectors, .classes, #ids, and comma-separated selector lists.</p></div>
-                <div class="support-row"><p class="support-name">Skipped</p><p class="support-detail">Combinators, descendant selectors, pseudo-classes, and attribute selectors.</p></div>
+                <div class="support-row"><p class="support-name">Element</p><p class="support-detail"><span class="inline-code">p</span>, <span class="inline-code">h1</span>, <span class="inline-code">div</span>, and other supported HTML64 types. Specificity 1.</p></div>
+                <div class="support-row"><p class="support-name">Class</p><p class="support-detail"><span class="inline-code">.panel</span>. Specificity 10.</p></div>
+                <div class="support-row"><p class="support-name">ID</p><p class="support-detail"><span class="inline-code">#site-logo</span>. Specificity 100.</p></div>
+                <div class="support-row"><p class="support-name">Selector lists</p><p class="support-detail">Up to eight selectors can share a declaration block.</p></div>
+                <p>Higher specificity wins. When specificity is equal, the later declaration wins. Inline styles are applied after stylesheet rules.</p>
             </div>
         </div>
-        <div class="section">
-            <h2 class="section-title">Supported properties</h2>
+        <div class="section accent-blue">
+            <h2 class="section-title section-title-blue">Length units and sizing</h2>
             <div class="section-body">
-<pre class="reference">Type
-  color  font-family  font-size
-  line-height  text-align
-
-Layout
-  display  vertical-align
-  width  height  min-width
-  max-width  margin  padding
-
-Backgrounds
-  background-color
-  background-image
-  background-repeat
-  background-size
-  background-position
-
-Edges and effects
-  border  border-width
-  border-style  border-color
-  border-radius  outline
-  outline-offset  box-shadow
-
-Position and input
-  position  top  right
-  bottom  left  z-index
-  cursor</pre>
+                <div class="unit-grid"><span class="unit-pill">px</span><span class="unit-pill">em</span><span class="unit-pill">vw</span><span class="unit-pill">vh</span><span class="unit-pill">%</span><span class="unit-pill">auto</span></div>
+                <p>Where a property accepts a length, CSS64 can use pixels, font-relative <span class="inline-code">em</span>, viewport-width <span class="inline-code">vw</span>, and viewport-height <span class="inline-code">vh</span> values. Percentage and <span class="inline-code">auto</span> support depends on the property.</p>
+                <pre class="code">.panel {
+  width: 80vw;
+  height: 25vh;
+  padding: 0.75em;
+  max-width: 560px;
+}</pre>
+                <div class="property-columns">
+                    <div class="property-column"><p class="property-heading">Sizing</p><p>width<br>height<br>min-width<br>max-width</p></div><div class="property-column"><p class="property-heading">Spacing</p><p>margin<br>margin-top/right/bottom/left<br>padding<br>padding-top/right/bottom/left</p></div><div class="property-column"><p class="property-heading">Display</p><p>inline<br>inline-block<br>block<br>vertical-align</p></div>
+                </div>
             </div>
         </div>
-        <div class="section">
-            <h2 class="section-title">Border styles</h2>
+        <div class="section accent-green">
+            <h2 class="section-title section-title-green">Colors, text, and opacity</h2>
             <div class="section-body">
-                <p>CSS64 supports the full set of classic CSS border styles. These are real rendered borders.</p>
-                <div class="css-demo-row">
-                    <div class="css-demo-box" style="background-color: #f7f0d5; border: 4px none #1c64c7;">none</div><div class="css-demo-box" style="background-color: #f7f0d5; border: 4px hidden #1c64c7;">hidden</div><div class="css-demo-box" style="border: 4px dotted #1c64c7;">dotted</div>
-                </div>
-                <div class="css-demo-row">
-                    <div class="css-demo-box" style="border: 4px dashed #873bc1;">dashed</div><div class="css-demo-box" style="border: 4px solid #1c64c7;">solid</div><div class="css-demo-box" style="border: 4px double #e96c14;">double</div>
-                </div>
-                <div class="css-demo-row">
-                    <div class="css-demo-box" style="border: 4px groove #67b91e;">groove</div><div class="css-demo-box" style="border: 4px ridge #1c9fb0;">ridge</div><div class="css-demo-box" style="border: 4px inset #d54848;">inset</div>
-                </div>
-                <div class="css-demo-row">
-                    <div class="css-demo-box" style="border: 4px outset #8e6425;">outset</div>
-                </div>
-                <pre class="code">border-style: none | hidden | dotted |
-  dashed | solid | double | groove |
-  ridge | inset | outset;</pre>
-                <p class="note">none and hidden reserve no visible border width. The remaining styles use the configured border width and color.</p>
+                <div class="support-row"><p class="support-name">Hex colors</p><p class="support-detail"><span class="inline-code">#RGB</span>, <span class="inline-code">#RGBA</span>, <span class="inline-code">#RRGGBB</span>, and <span class="inline-code">#RRGGBBAA</span>.</p></div>
+                <div class="support-row"><p class="support-name">RGB colors</p><p class="support-detail"><span class="inline-code">rgb()</span> and <span class="inline-code">rgba()</span> with numeric or percentage channels.</p></div>
+                <div class="support-row"><p class="support-name">Named colors</p><p class="support-detail">black, white, red, green, blue, yellow, gray/grey, transparent, and currentcolor where supported.</p></div>
+                <div class="support-row"><p class="support-name">Text</p><p class="support-detail">color, font-family, font-size, text-align, line-height, and vertical-align.</p></div>
+                <div class="support-row"><p class="support-name">Opacity</p><p class="support-detail">Use a value from <span class="inline-code">0</span> through <span class="inline-code">1</span>.</p></div>
+                <div class="opacity-demo"><span class="opacity-swatch" style="opacity: 1;">1.0</span><span class="opacity-swatch" style="opacity: 0.7;">0.7</span><span class="opacity-swatch" style="opacity: 0.4;">0.4</span><span class="opacity-swatch" style="opacity: 0.15;">0.15</span></div>
+                <pre class="code">color: #f80;
+background-color: rgba(32, 64, 96, 0.8);
+opacity: 0.7;</pre>
             </div>
         </div>
-        <div class="section">
-            <h2 class="section-title">Border radius</h2>
+        <div class="section accent-orange">
+            <h2 class="section-title section-title-orange">Backgrounds</h2>
             <div class="section-body">
-                <p>Use one radius for every corner, or shape each corner independently.</p>
-                <div class="css-demo-row">
-                    <div class="css-demo-box" style="width: 140px; padding: 18px 4px; border: 4px solid #1c64c7; border-radius: 18px;">all corners</div><div class="css-demo-box" style="width: 140px; padding: 18px 4px; border: 4px solid #873bc1; border-top-left-radius: 24px; border-top-right-radius: 4px; border-bottom-right-radius: 24px; border-bottom-left-radius: 4px;">per-corner</div>
-                </div>
-                <pre class="code">border-radius: 18px;
-
-border-top-left-radius: 24px;
-border-top-right-radius: 4px;
-border-bottom-right-radius: 24px;
-border-bottom-left-radius: 4px;</pre>
+                <div class="support-row"><p class="support-name">Properties</p><p class="support-detail">background, background-color, background-image, background-repeat, background-size, and background-position.</p></div>
+                <div class="support-row"><p class="support-name">Repeat</p><p class="support-detail">repeat, repeat-x, repeat-y, and no-repeat.</p></div>
+                <div class="support-row"><p class="support-name">Size</p><p class="support-detail">auto, cover, contain, pixels, percentages, one-value, and two-value forms.</p></div>
+                <div class="support-row"><p class="support-name">Position</p><p class="support-detail">Keywords, pixels, percentages, one-value, and two-value forms.</p></div>
+                <div class="background-demo">Repeated background</div>
+                <pre class="code">.panel {
+  background: #dcecff;
+  background-image: url("images/background2.sprite");
+  background-repeat: repeat;
+  background-size: 32px 32px;
+}</pre>
             </div>
         </div>
-        <div class="section">
-            <h2 class="section-title">Box shadows</h2>
+        <div class="section accent-red">
+            <h2 class="section-title section-title-red">Borders and rounded corners</h2>
             <div class="section-body">
-                <div class="css-demo-row">
-                    <div class="css-demo-box" style="border: 3px solid #174f78; box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.35);">outer shadow</div><div class="css-demo-box" style="border: 3px solid #873bc1; box-shadow: inset -3px -3px 8px rgba(0, 0, 0, 0.25);">inset shadow</div>
-                </div>
-                <pre class="code">box-shadow:
-  5px 5px 6px rgba(0,0,0,0.35);
-
-box-shadow:
-  inset -3px -3px 8px rgba(0,0,0,0.25);</pre>
+                <div class="css-demo-row"><div class="css-demo-box" style="border: 4px dotted #1c64c7;">dotted</div><div class="css-demo-box" style="border: 4px dashed #873bc1;">dashed</div><div class="css-demo-box" style="border: 4px solid #1c64c7;">solid</div></div>
+                <div class="css-demo-row"><div class="css-demo-box" style="border: 4px double #e96c14;">double</div><div class="css-demo-box" style="border: 4px groove #67b91e;">groove</div><div class="css-demo-box" style="border: 4px ridge #1c9fb0;">ridge</div></div>
+                <div class="css-demo-row"><div class="css-demo-box" style="border: 4px inset #d54848;">inset</div><div class="css-demo-box" style="border: 4px outset #8e6425;">outset</div><div class="css-demo-box" style="border: 4px solid #873bc1;">radius</div></div>
+                <p>Supported border styles are none, hidden, dotted, dashed, solid, double, groove, ridge, inset, and outset. Border radius supports shorthand and individual corners, but it requires additional rendering memory. Use it sparingly on N64 pages, especially for repeated containers.</p>
+                <pre class="code">.small-badge {
+  border-radius: 8px;
+}</pre>
             </div>
         </div>
-        <div class="section">
-            <h2 class="section-title">Background images</h2>
+        <div class="section accent-purple">
+            <h2 class="section-title section-title-purple">Shadows and outlines</h2>
             <div class="section-body">
-                <div class="css-demo-row"><div class="css-demo-box" style="width: 250px; background-color: #dcecff; background-image: url('../images/purple-crystal.sprite'); background-repeat: no-repeat; background-position: 95% 50%;">one positioned sprite</div></div>
-                <pre class="code">background-image:
-  url("images/crystal.sprite");
-background-repeat: no-repeat;
-background-position: 95% 50%;</pre>
+                <div class="css-demo-row"><div class="css-demo-box shadow-demo">outer shadow</div><div class="css-demo-box inset-demo">inset shadow</div><div class="css-demo-box outline-demo">outline</div></div>
+                <div class="support-row"><p class="support-name">box-shadow</p><p class="support-detail">Offsets, blur, spread, colors, inset shadows, multiple shadows, and none.</p></div>
+                <div class="support-row"><p class="support-name">outline</p><p class="support-detail">outline, width, style, color, and offset.</p></div>
             </div>
         </div>
-        <div class="section">
-            <h2 class="section-title">Not part of CSS64</h2>
+        <div class="section accent-blue">
+            <h2 class="section-title section-title-blue">Positioning and cursor</h2>
             <div class="section-body">
-                <p>Flexbox, Grid, media queries, transitions, animations, transforms, and sticky positioning are not supported.</p>
+                <div class="support-row"><p class="support-name">position</p><p class="support-detail">static, relative, absolute, and fixed.</p></div>
+                <div class="support-row"><p class="support-name">Offsets</p><p class="support-detail">top, right, bottom, and left with positive or negative lengths, zero, or auto.</p></div>
+                <div class="support-row"><p class="support-name">Stacking</p><p class="support-detail">z-index accepts a signed integer or auto.</p></div>
+                <div class="support-row"><p class="support-name">Cursor</p><p class="support-detail">auto, default, and pointer.</p></div>
+                <p>Standard CSS block comments are accepted and ignored.</p>
             </div>
         </div>
     </div>
     </div>
-    <p class="footer"><a href="../index.html">Home</a> | <a href="../about.html">About Web64</a> | <a href="../docs.html">Developer Docs</a></p>
+    <p class="footer"><a class="footer-link" href="../index.html">Home</a> | <a class="footer-link" href="../about.html">About Web64</a> | <a class="footer-link" href="../links.html">Web64 Links</a> | <a class="footer-link" href="../docs.html">Developer Docs</a></p>
 </div>
 </body>
 </html>
