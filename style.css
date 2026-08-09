@@ -279,6 +279,11 @@ h2 {
     font-family: "Web64 Slab", "Web64 Roundabout", monospace;
 }
 
+.footer-credit { 
+    opacity: 0.7; 
+    white-space: nowrap; 
+}
+
 .footer {
     color: #fff8d7;
     text-align: center;
