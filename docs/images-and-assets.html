@@ -1,92 +1,54 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Assets - Web64 Docs</title>
-  <link rel="stylesheet" href="../fonts.css">
-  <link rel="stylesheet" href="../docs.css">
-</head>
-<body>
-<div class="hero-banner">
-  <img class="site-title" src="../images/web64-title.png" alt="Web64" width="256" height="128">
-  <p class="tagline">Images and page resources</p>
+<div class="section accent-blue">
+  <h2 class="section-title section-title-blue">Image sources</h2>
+  <div class="section-body">
+    <div class="support-row"><p class="support-name">Current format</p><p class="support-detail">Web64 currently supports <span class="inline-code">.png, .jpg, .jpeg and .webp</span> image files.</p></div>
+    <div class="asset-preview"><img class="asset-thumb" src="../images/purple-crystal.png" alt="Purple crystal" width="26" height="26"><img class="asset-thumb" src="../images/cloud.png" alt="Cloud" width="64" height="32"><img class="asset-thumb" src="../ui/star.png" alt="Star" width="26" height="26"></div>
+  </div>
 </div>
-<div class="page-shell">
-  <div class="nav-row">
-    <a class="nav-link nav-home" href="../index.html"><img class="nav-icon" src="../ui/star.png" alt="" width="26" height="26">Home</a><a class="nav-link nav-about" href="../about.html"><img class="nav-icon" src="../images/cloud.png" alt="" width="26" height="26">About</a><a class="nav-link nav-links" href="../links.html"><img class="nav-icon" src="../ui/web.png" alt="" width="26" height="26">Links</a><a class="nav-link nav-docs" href="../docs.html"><img class="nav-icon" src="../images/purple-crystal.png" alt="" width="26" height="26">Docs</a>
-  </div>
-  <div class="docs-heading-card">
-    <h1 class="docs-heading-title"><img class="title-icon" src="../ui/start-button.png" alt="" width="26" height="26">Web64 Developer Docs</h1>
-    <p class="docs-heading-copy">Build compact websites for a browser running directly on Nintendo 64 hardware.</p>
-  </div>
-  <div class="docs-layout">
-    <div class="docs-sidebar">
-      <p class="docs-sidebar-title">Documentation</p>
-      <a class="docs-side-link docs-side-home" href="../docs.html"><img class="docs-side-icon" src="../ui/start-button.png" alt="" width="20" height="20">Docs Home</a>
-      <a class="docs-side-link docs-side-build" href="building-for-web64.html"><img class="docs-side-icon" src="../ui/star.png" alt="" width="20" height="20">Build</a>
-      <a class="docs-side-link docs-side-html" href="html64.html"><img class="docs-side-icon" src="../images/cloud.png" alt="" width="20" height="20">HTML64</a>
-      <a class="docs-side-link docs-side-css" href="css64.html"><img class="docs-side-icon" src="../images/purple-crystal.png" alt="" width="20" height="20">CSS64</a>
-      <a class="docs-side-link docs-side-fonts" href="fonts-and-languages.html"><img class="docs-side-icon" src="../ui/web.png" alt="" width="20" height="20">Fonts</a>
-      <a class="docs-side-link docs-side-assets docs-side-current" href="images-and-assets.html"><img class="docs-side-icon" src="../images/cloud.png" alt="" width="20" height="20">Assets</a>
-      <a class="docs-side-link docs-side-starter" href="starter-site.html"><img class="docs-side-icon" src="../ui/star.png" alt="" width="20" height="20">Starter</a>
-    </div><div class="docs-main">
-    <h1 class="page-title">Assets</h1>
-    <p class="page-lead">Convert source assets using the web64-tools GitHub repo. Use web64-build for website asset conversion and support.</p>
 
-    <div class="section accent-blue">
-      <h2 class="section-title section-title-blue">Image sources</h2>
-      <div class="section-body">
-        <div class="support-row"><p class="support-name">Current format</p><p class="support-detail">Web64 currently supports <span class="inline-code">.png, .jpg, .jpeg and .webp</span> image files.</p></div>
-        <div class="asset-preview"><img class="asset-thumb" src="../images/purple-crystal.png" alt="Purple crystal" width="26" height="26"><img class="asset-thumb" src="../images/cloud.png" alt="Cloud" width="64" height="32"><img class="asset-thumb" src="../ui/star.png" alt="Star" width="26" height="26"></div>
-      </div>
-    </div>
-
-    <div class="section accent-green">
-      <h2 class="section-title section-title-green">HTML image example</h2>
-      <div class="section-body">
-        <pre class="code">&lt;img
+<div class="section accent-green">
+  <h2 class="section-title section-title-green">HTML image example</h2>
+  <div class="section-body">
+    <pre class="code">&lt;img
   src="images/crystal.png"
   alt="Purple crystal"
   width="26"
   height="26"
 &gt;</pre>
-        <p>Use the normal source image path in your HTML. Web64 requests the generated Web64 asset automatically.</p>
-      </div>
-    </div>
 
-    <div class="section accent-green">
-      <h2 class="section-title section-title-green">Build website assets</h2>
-      <div class="section-body">
-        <p>Use <span class="inline-code">web64-build</span> on the root directory of your website before uploading or testing it with Web64.</p>
+    <p>Use the normal source image path in your HTML. Web64 requests the generated Web64 asset automatically.</p>
+  </div>
+</div>
 
-        <pre class="code">./web64-build build /path/to/website</pre>
+<div class="section accent-green">
+  <h2 class="section-title section-title-green">Build website assets</h2>
+  <div class="section-body">
+    <p>Get <span class="inline-code">web64-build</span> from:</p>
 
-        <p>You can also run it from inside your website directory:</p>
+    <pre class="reference">https://github.com/Boxingbruin/web64-tools</pre>
 
-        <pre class="code">/path/to/web64-build build .</pre>
+    <p>Run it on the root directory of your website before uploading or testing the site with Web64:</p>
 
-        <p>The tool scans the website recursively and creates Web64-compatible <span class="inline-code">.sprite</span> files beside supported source images.</p>
+    <pre class="code">./web64-build build /path/to/website</pre>
 
-        <pre class="reference">images/crystal.png
+    <p>You can also run it from inside your website directory:</p>
+
+    <pre class="code">/path/to/web64-build build .</pre>
+
+    <p>The tool scans the website recursively and creates Web64-compatible <span class="inline-code">.sprite</span> files beside supported source images.</p>
+
+    <pre class="reference">images/crystal.png
 images/crystal.sprite</pre>
 
-        <p>Your HTML and CSS continue to reference the original image file. The generated <span class="inline-code">.sprite</span> file is used by Web64.</p>
-      </div>
-    </div>
-
-    <div class="section accent-blue">
-      <h2 class="section-title section-title-blue">Useful commands</h2>
-      <div class="section-body">
-        <div class="support-row"><p class="support-name">Build</p><p class="support-detail"><span class="inline-code">web64-build build [directory]</span> generates missing or outdated Web64 assets.</p></div>
-        <div class="support-row"><p class="support-name">Check</p><p class="support-detail"><span class="inline-code">web64-build check [directory]</span> checks the project without changing any files.</p></div>
-        <div class="support-row"><p class="support-name">Clean</p><p class="support-detail"><span class="inline-code">web64-build clean [directory]</span> removes generated Web64 assets.</p></div>
-      </div>
-    </div>
-
+    <p>Your HTML and CSS continue to reference the original image file. The generated <span class="inline-code">.sprite</span> file is used by Web64.</p>
   </div>
-  </div>
-  <p class="footer"><a class="footer-link" href="../index.html">Home</a> | <a class="footer-link" href="../about.html">About Web64</a> | <a class="footer-link" href="../links.html">Web64 Links</a> | <a class="footer-link" href="../docs.html">Developer Docs</a></p>
 </div>
-</body>
-</html>
+
+<div class="section accent-blue">
+  <h2 class="section-title section-title-blue">Useful commands</h2>
+  <div class="section-body">
+    <div class="support-row"><p class="support-name">Build</p><p class="support-detail"><span class="inline-code">web64-build build [directory]</span> generates missing or outdated Web64 assets.</p></div>
+    <div class="support-row"><p class="support-name">Check</p><p class="support-detail"><span class="inline-code">web64-build check [directory]</span> checks the project without changing any files.</p></div>
+    <div class="support-row"><p class="support-name">Clean</p><p class="support-detail"><span class="inline-code">web64-build clean [directory]</span> removes generated Web64 assets.</p></div>
+  </div>
+</div>
